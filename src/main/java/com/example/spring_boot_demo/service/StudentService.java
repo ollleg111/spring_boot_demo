@@ -2,7 +2,7 @@ package com.example.spring_boot_demo.service;
 
 import com.example.spring_boot_demo.dao.StudentDAO;
 import com.example.spring_boot_demo.model.Student;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -11,13 +11,9 @@ import java.util.Objects;
 import java.util.Optional;
 
 @Service
+@AllArgsConstructor
 public class StudentService {
     private final StudentDAO studentDAO;
-
-    @Autowired
-    public StudentService(StudentDAO studentDAO) {
-        this.studentDAO = studentDAO;
-    }
 
     public List<Student> getStudents(){
         return studentDAO.findAll();

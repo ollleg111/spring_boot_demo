@@ -10,6 +10,7 @@ import java.time.Period;
 @Table
 @ToString
 @NoArgsConstructor
+@AllArgsConstructor
 @EqualsAndHashCode
 @Getter
 @Setter
