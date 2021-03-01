@@ -4,7 +4,6 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.Period;
 
 @Entity
 @Table
@@ -35,16 +34,6 @@ public class Student {
 
     @Transient
     private Integer age;
-
-    public Student(Long id,
-                   String name,
-                   String email,
-                   LocalDate dob) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.dob = dob;
-    }
 
     public Student(String name,
                    String email,
